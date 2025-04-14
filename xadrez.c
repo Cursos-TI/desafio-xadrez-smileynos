@@ -3,7 +3,7 @@
      
 int main() {
     int opcao;
-    int movimentocavalo;
+    
     do{
         printf("Inicie o jogo xadrez\n");
         printf("Escolha a opção da peça que você quer movimentar: \n");
@@ -17,7 +17,7 @@ int main() {
         {
         case 1:
             printf("Você escolheu se movimentar com o bispo:\n");
-            for(opcao = 0; opcao <5; opcao++){
+            for(int movimentarbispo = 0; movimentarbispo <5; movimentarbispo++){
                 printf("Direita\n");
             }
             
@@ -25,13 +25,13 @@ int main() {
 
         case 2:
             printf("Você escolheu se movimentar com a Rainha:\n");
-            for(opcao = 0; opcao <8; opcao++){
+            for(int movimentarrainha = 0; movimentarrainha <8; movimentarrainha++){
                 printf("Esquerda\n");
             }
         break;
         case 3:
             printf("Você escolheu se movimentar com a Torre:\n");
-            for(opcao = 0; opcao <5; opcao++){
+            for(int movimentartorre = 0; movimentartorre <5; movimentartorre++){
                 printf("Frente\n");
             }
         break;
@@ -39,16 +39,17 @@ int main() {
             printf("Você escolheu se movimentar com o cavalo:\n");
             for(opcao = 0; opcao <2; opcao++){
                 printf("Cima\n");
-                for (movimentocavalo = 0; movimentocavalo <opcao; movimentocavalo++){
-                    printf("Esqueda\n");
+                for (int movimentocavalo = 0; movimentocavalo <opcao; movimentocavalo++){
+                    printf("Esquerda\n");
                 }
+
             }
         break;
         default:
         printf("Nenhuma opção escolhida\n \n"); 
             break;
         }
-    }while (opcao >=5 );
+    }while (opcao >= 5);
 
     
     return 0;
