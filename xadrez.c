@@ -48,7 +48,7 @@ int main() {
         printf("Nenhuma opção escolhida\n \n"); 
             break;
         }
-    }while (opcao > 4 );
+    }while (opcao >=5 );
 
     
     return 0;
